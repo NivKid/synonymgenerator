@@ -8,15 +8,6 @@ import os
 
 app = Flask(__name__)
 
-
-UPLOAD_FOLDER = './uploads'
-RESULT_FOLDER = './results'
-os.makedirs(UPLOAD_FOLDER,exist_ok=True)
-os.makedirs(RESULT_FOLDER,exist_ok=True)
-
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER 
-
-
 def transform(text_file_contents):
     config = text_file_contents
     parentkey= [*config]
